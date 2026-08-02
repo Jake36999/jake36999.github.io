@@ -27,7 +27,7 @@
       <div class="narrow" style="text-align:center">
         <p class="eyebrow">Case studies</p>
         <h1>Problem, approach, measured result.</h1>
-        <p class="lede">Six active repositories. Every figure below is output from a real run — not an estimate.</p>
+        <p class="lede">Six active repositories. Every figure below is measured output from a real run or from each project's own test suite — not an estimate, and not third-party validation.</p>
       </div>
     </section>
   </div>
@@ -47,12 +47,12 @@
           <h3 style="margin-top:22px">The approach</h3>
           <p>A five-layer pipeline — ingestion, topological analysis, semantic projection, strict contract validation, synthesis — producing ChatML and QLoRA output. Every accept and reject decision is written to a SHA-256 hash-chained ledger. Circular dependencies are quarantined and logged rather than aborting the run.</p>
           <h3 style="margin-top:22px">The result</h3>
-          <p>Validated end-to-end against <code>encode/starlette</code>.</p>
+          <p>Run end-to-end against <code>encode/starlette</code>, a real production codebase. The ledger's hash chain verified intact across the full run, and all six internal integrity dimensions reported pass.</p>
           <div class="stats" style="margin:22px 0 4px">
             <div class="stat"><div class="n">1,615</div><div class="l">Nodes extracted</div></div>
+            <div class="stat"><div class="n">198</div><div class="l">Cycles quarantined</div></div>
             <div class="stat"><div class="n">6,994</div><div class="l">Ledger entries</div></div>
-            <div class="stat"><div class="n">100%</div><div class="l">Verified integrity</div></div>
-            <div class="stat"><div class="n">427</div><div class="l">Tests passing</div></div>
+            <div class="stat"><div class="n">427</div><div class="l">Own tests passed</div></div>
           </div>
           <div class="stack"><span>Python</span><span>FastAPI</span><span>Celery</span><span>Redis</span><span>Pydantic v2</span><span>tree-sitter</span><span>Docker</span></div>
           <a class="card-link" href="https://github.com/Jake36999/Custom_Agent_Forge" target="_blank" rel="noopener">View repository →</a>
@@ -77,7 +77,7 @@
           <h3>Agent_backend</h3>
           <p><strong>Problem:</strong> permitting an agent to modify source code is a liability without verification and a reliable path back.</p>
           <p><strong>Approach:</strong> an MCP-compatible orchestrator where patches require an explicit approval record and a SHA256 diff match before applying, with snapshot-based rollback.</p>
-          <span class="metric"><b>264</b> Python + <b>25</b> Node tests passing · <code>v0.2.0</code></span>
+          <span class="metric">Own suites: <b>264</b> Python (12 subtests) + <b>25</b> Node contract tests · <code>v0.2.0</code></span>
           <div class="stack"><span>Python</span><span>Node.js</span><span>SQLite</span><span>JSON-RPC</span><span>MCP</span></div>
           <a class="card-link" href="https://github.com/Jake36999/Agent_backend" target="_blank" rel="noopener">View repository →</a>
         </div>
@@ -107,7 +107,7 @@
           <h3>ToolSet</h3>
           <p><strong>Problem:</strong> tooling degrades when nothing enforces that "complete" means tested and verified.</p>
           <p><strong>Approach:</strong> a twelve-phase rebuild of a repository-analysis toolchain, each phase gated on passing tests and explicit approval, with a reviewer that rejects changes lacking terminal-verified evidence.</p>
-          <span class="metric"><b>289/289</b> tests passing · CI on Windows and Linux</span>
+          <span class="metric">Own regression suite: <b>289/289</b> · CI on Windows and Linux</span>
           <div class="stack"><span>Python</span><span>MCP</span><span>CI/CD</span></div>
           <a class="card-link" href="https://github.com/Jake36999/ToolSet" target="_blank" rel="noopener">View repository →</a>
         </div>
@@ -134,7 +134,8 @@
       </div>
 
       <div class="narrow" style="margin-top:34px">
-        <p class="note reveal"><strong>Licensing:</strong> remember_me's backend (Mnemosyne) is AGPL-3.0 and Mark-XLVIII's base (Mark-L) is CC BY-NC 4.0. Both restrict commercial use of that specific underlying material, and both are credited in their repositories. Neither restriction applies to client or contract work, which is built fresh.</p>
+        <p class="note reveal"><strong>On the figures:</strong> test counts refer to each project's own suite, written during development — not independent or third-party validation. They show the work is covered and reproducible, nothing more. Run outputs (ledger entries, nodes, quarantine counts) are measured from real executions and are reproducible from the repositories.</p>
+        <p class="note reveal" style="margin-top:16px"><strong>Licensing:</strong> remember_me's backend (Mnemosyne) is AGPL-3.0 and Mark-XLVIII's base (Mark-L) is CC BY-NC 4.0. Both restrict commercial use of that specific underlying material, and both are credited in their repositories. Neither restriction applies to client or contract work, which is built fresh.</p>
       </div>
     </div>
   </section>
