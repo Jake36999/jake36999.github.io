@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jake McIntosh — Local-First Agentic AI Systems</title>
+<meta name="description" content="Jake McIntosh builds local-first agentic AI systems: tool-calling governance, RAG memory, and applied ML pipelines with real provenance discipline.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <span class="brand">Jake McIntosh</span>
+    <nav class="main">
+      <a href="index.html" class="active">Home</a>
+      <a href="work.html">Work</a>
+      <a href="business.html">For Businesses</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="hero tight">
+      <p class="eyebrow">Domain expert, locally-hosted agentic AI</p>
+      <h1>I build local-first AI systems that have to prove they worked — not just claim it.</h1>
+      <p class="lede">Tool-calling governance, RAG memory, and applied ML pipelines. Cryptographic audit trails and human-in-the-loop approval by default, across every system I've shipped in the last 15 months.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="work.html">See the work</a>
+        <a class="btn ghost" href="mailto:jakemcintosh1324@gmail.com">Get in touch</a>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <section>
+      <div class="section-head">
+        <p class="eyebrow">How the systems are shaped</p>
+        <h2>Every project runs the same pipeline</h2>
+        <p>From raw input to a human decision — the shape doesn't change whether the input is a codebase, a note, or a radio signal.</p>
+      </div>
+
+      <svg class="arch" viewBox="0 0 640 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pipeline diagram: Files, APIs, Events into Ingestion and Cleaning, into Queue, State and Workers, into Embedding, Search and Simulation, into Memory, Validation and Tool Calls, into Agent Output, API Response and Human Review">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--accent)"/>
+          </marker>
+        </defs>
+        <g font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="16" font-weight="600">
+          <rect x="120" y="10"  width="400" height="60" rx="10" fill="var(--bg-alt)" stroke="var(--border)"/>
+          <text x="320" y="46" text-anchor="middle" fill="var(--text)">Files / APIs / Events</text>
+
+          <rect x="120" y="100" width="400" height="60" rx="10" fill="var(--bg-alt)" stroke="var(--border)"/>
+          <text x="320" y="136" text-anchor="middle" fill="var(--text)">Ingestion + Cleaning</text>
+
+          <rect x="120" y="190" width="400" height="60" rx="10" fill="var(--bg-alt)" stroke="var(--border)"/>
+          <text x="320" y="226" text-anchor="middle" fill="var(--text)">Queue / State / Workers</text>
+
+          <rect x="120" y="280" width="400" height="60" rx="10" fill="var(--bg-alt)" stroke="var(--border)"/>
+          <text x="320" y="316" text-anchor="middle" fill="var(--text)">Embedding / Search / Simulation</text>
+
+          <rect x="120" y="370" width="400" height="60" rx="10" fill="var(--accent-dim)" stroke="var(--accent)"/>
+          <text x="320" y="406" text-anchor="middle" fill="var(--text)">Memory / Validation / Tool Calls</text>
+
+          <rect x="120" y="460" width="400" height="60" rx="10" fill="var(--bg-alt)" stroke="var(--border)"/>
+          <text x="320" y="496" text-anchor="middle" fill="var(--text)">Agent Output / API Response / Human Review</text>
+        </g>
+        <g stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)">
+          <line x1="320" y1="70"  x2="320" y2="98"/>
+          <line x1="320" y1="160" x2="320" y2="188"/>
+          <line x1="320" y1="250" x2="320" y2="278"/>
+          <line x1="320" y1="340" x2="320" y2="368"/>
+          <line x1="320" y1="430" x2="320" y2="458"/>
+        </g>
+      </svg>
+      <p class="note">The highlighted step is the one that matters most: nothing reaches a human or an API response without passing through validation first. That's true in a fine-tuning pipeline, a notes app, and an RF sensing rig — three completely different domains, the same rule.</p>
+    </section>
+
+    <hr class="divider">
+
+    <section>
+      <div class="section-head">
+        <p class="eyebrow">What that actually means</p>
+        <h2>Four habits, five unrelated domains</h2>
+        <p>These weren't planned as a "philosophy" — they're just what kept showing up, independently, across agent orchestration, RAG memory, dev tooling, and RF/ML systems.</p>
+      </div>
+      <div class="principles">
+        <div class="card">
+          <p class="num">01</p>
+          <h3>Audit trails, not just outputs</h3>
+          <p>Hash-chained ledgers, SHA256-verified patch diffs, SHA1 manifest fingerprints — every accept/reject decision is traceable, not just the final answer.</p>
+        </div>
+        <div class="card">
+          <p class="num">02</p>
+          <h3>Quarantine, never silently delete</h3>
+          <p>Bad artifacts get isolated and logged so the failure stays inspectable, instead of vanishing.</p>
+        </div>
+        <div class="card">
+          <p class="num">03</p>
+          <h3>Honest, narrow scope claims</h3>
+          <p>A system is labelled at exactly the confidence level it's earned. Written non-goal lists, not marketing.</p>
+        </div>
+        <div class="card">
+          <p class="num">04</p>
+          <h3>Gates that catch my own mistakes</h3>
+          <p>Readiness gates that have already caught and correctly discarded a bad training run, instead of shipping it.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <section id="contact">
+      <div class="section-head">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Preston, UK — open to contract and consulting work</h2>
+        <p>AI training/evaluation contracts, agent systems consulting, and backend automation. No phone required — email is the fastest way to reach me.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn primary" href="mailto:jakemcintosh1324@gmail.com">jakemcintosh1324@gmail.com</a>
+        <a class="btn ghost" href="https://github.com/Jake36999" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/jake-l-mcintosh-data-ops" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Jake McIntosh</span>
+    <span>Built local-first, shipped rough on purpose.</span>
+  </div>
+</footer>
+
+</body>
+</html>
