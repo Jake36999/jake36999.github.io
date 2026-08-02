@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Case Studies — Jake McIntosh</title>
-<meta name="description" content="Six production repositories: cryptographically-audited fine-tuning pipelines, MCP agent orchestration with governed patching, RAG memory, dev toolchains, and applied RF machine learning.">
+<meta name="description" content="Six production repositories: cryptographically-audited fine-tuning, MCP agent orchestration with governed patching, RAG memory, dev toolchains, and applied RF machine learning.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,26 +33,33 @@
   </div>
 
   <!-- FEATURED -->
-  <section class="alt">
+  <section>
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">Featured</p>
         <h2>Custom_Agent_Forge</h2>
-        <p>An auditable training-data pipeline for fine-tuning on real codebases.</p>
+        <p>Fine-tunes models — or matures their reasoning on past failures — using cryptographically-audited data for full traceability.</p>
       </div>
       <div class="narrow">
         <div class="card reveal">
           <h3>The problem</h3>
-          <p>Generating fine-tuning data from a codebase typically offers no way to verify, after the fact, that a given training example was correctly derived rather than hallucinated.</p>
+          <p>Fine-tuning well means matching the training approach to what the model actually needs — general reasoning, coding ability, or specifically not repeating a known failure — and being able to prove the training data itself is trustworthy.</p>
           <h3 style="margin-top:22px">The approach</h3>
-          <p>A five-layer pipeline — ingestion, topological analysis, semantic projection, strict contract validation, synthesis — producing ChatML and QLoRA output. Every accept and reject decision is written to a SHA-256 hash-chained ledger. Circular dependencies are quarantined and logged rather than aborting the run.</p>
+          <p>Four modes select both what data gets ingested and what kind of model comes out:</p>
+          <ul style="color:var(--text-dim);font-size:0.96rem;padding-left:20px;margin:10px 0">
+            <li><strong style="color:var(--text)">Coding Assistant</strong> — trained on GitHub repositories via a rolling buffer</li>
+            <li><strong style="color:var(--text)">Scholar</strong> — trained on documents and PDFs, weighted toward semantics over structure</li>
+            <li><strong style="color:var(--text)">Project Manager</strong> — trained on both, tuned to retain reasoning over code and semantics together, usually paired with system-prompt instructions at deployment</li>
+            <li><strong style="color:var(--text)">Veteran</strong> — builds a DAG from a reverse graph of identified failures and their solutions, fine-tuning the model specifically to avoid repeating them</li>
+          </ul>
+          <p>Every accept and reject decision is written to a SHA-256 hash-chained ledger. It's a one-way, project-agnostic pipeline — base model in, fine-tuned model out — not an agent, and not used to support one.</p>
           <h3 style="margin-top:22px">The result</h3>
-          <p>Run end-to-end against <code>encode/starlette</code>, a real production codebase. The ledger's hash chain verified intact across the full run, and all six internal integrity dimensions reported pass.</p>
-          <div class="stats" style="margin:22px 0 4px">
-            <div class="stat"><div class="n">1,615</div><div class="l">Nodes extracted</div></div>
-            <div class="stat"><div class="n">198</div><div class="l">Cycles quarantined</div></div>
-            <div class="stat"><div class="n">6,994</div><div class="l">Ledger entries</div></div>
-            <div class="stat"><div class="n">427</div><div class="l">Own tests passed</div></div>
+          <p>Run against <code>encode/starlette</code>, a real production codebase. The ledger's hash chain verified intact across the full run.</p>
+          <div class="stats" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:22px 0 4px;text-align:center">
+            <div class="stat"><div style="font-size:1.8rem;font-weight:800;color:var(--accent)">1,615</div><div style="font-size:0.82rem;color:var(--text-dim)">Nodes extracted</div></div>
+            <div class="stat"><div style="font-size:1.8rem;font-weight:800;color:var(--accent)">198</div><div style="font-size:0.82rem;color:var(--text-dim)">Cycles quarantined</div></div>
+            <div class="stat"><div style="font-size:1.8rem;font-weight:800;color:var(--accent)">6,994</div><div style="font-size:0.82rem;color:var(--text-dim)">Ledger entries</div></div>
+            <div class="stat"><div style="font-size:1.8rem;font-weight:800;color:var(--accent)">427</div><div style="font-size:0.82rem;color:var(--text-dim)">Own tests passed</div></div>
           </div>
           <div class="stack"><span>Python</span><span>FastAPI</span><span>Celery</span><span>Redis</span><span>Pydantic v2</span><span>tree-sitter</span><span>Docker</span></div>
           <a class="card-link" href="https://github.com/Jake36999/Custom_Agent_Forge" target="_blank" rel="noopener">View repository →</a>
@@ -75,8 +82,8 @@
         <div class="card reveal">
           <span class="tag">Agent governance</span>
           <h3>Agent_backend</h3>
-          <p><strong>Problem:</strong> permitting an agent to modify source code is a liability without verification and a reliable path back.</p>
-          <p><strong>Approach:</strong> an MCP-compatible orchestrator where patches require an explicit approval record and a SHA256 diff match before applying, with snapshot-based rollback.</p>
+          <p><strong>Problem:</strong> letting an agent modify files is a liability without verification and a reliable path back — and most agent backends only work by replacing a client's existing interface rather than fitting into one they already use.</p>
+          <p><strong>Approach:</strong> an agentic backend that plugs into an existing UI. Models can view, create, edit, and delete files under strict control gates: every action logged in human-readable YAML, every patch requiring an explicit approval record and a SHA256 diff match before applying, with snapshot-based rollback. A Python daemon chains multi-step operations into a single response instead of multiple round-trips.</p>
           <span class="metric">Own suites: <b>264</b> Python (12 subtests) + <b>25</b> Node contract tests · <code>v0.2.0</code></span>
           <div class="stack"><span>Python</span><span>Node.js</span><span>SQLite</span><span>JSON-RPC</span><span>MCP</span></div>
           <a class="card-link" href="https://github.com/Jake36999/Agent_backend" target="_blank" rel="noopener">View repository →</a>
@@ -105,8 +112,8 @@
         <div class="card reveal">
           <span class="tag">Developer tooling</span>
           <h3>ToolSet</h3>
-          <p><strong>Problem:</strong> tooling degrades when nothing enforces that "complete" means tested and verified.</p>
-          <p><strong>Approach:</strong> a twelve-phase rebuild of a repository-analysis toolchain, each phase gated on passing tests and explicit approval, with a reviewer that rejects changes lacking terminal-verified evidence.</p>
+          <p><strong>Problem:</strong> cloud LLM services have file-upload limits and finite context windows — feeding them a real codebase means hitting the limit or drowning the model's attention in boilerplate.</p>
+          <p><strong>Approach:</strong> one process, several tools — take a repository and compile it into whatever form actually fits the job. Full-directory snapshots when the whole structure matters, AST-based extraction of just the relevant functions when it doesn't, or a repackaged local pipeline for Google Colab's resources. The techniques matured past the original problem: the snapshot/approval/rollback discipline now in Agent_backend, and the semantic code slicing now in Custom_Agent_Forge, both trace back to tooling built here first.</p>
           <span class="metric">Own regression suite: <b>289/289</b> · CI on Windows and Linux</span>
           <div class="stack"><span>Python</span><span>MCP</span><span>CI/CD</span></div>
           <a class="card-link" href="https://github.com/Jake36999/ToolSet" target="_blank" rel="noopener">View repository →</a>
@@ -116,9 +123,9 @@
           <span class="tag">Applied ML / RF</span>
           <h3>network_management</h3>
           <p><strong>Problem:</strong> device-free presence sensing and network security monitoring are typically separate disciplines with no shared timeline.</p>
-          <p><strong>Approach:</strong> Intel 5300 CSI capture via a patched driver, bridged across hosts over mTLS, correlated with network reconnaissance telemetry into a single SIEM timeline.</p>
+          <p><strong>Approach:</strong> cross-vendor hardware — a Ubiquiti UniFi nanoHD access point and a Mercusys MR30G router bridging two Intel 5300 CSI capture cards — feeding a low-latency ZeroMQ bridge from a secondary capture PC to a GPU-accelerated physics mirror on the main machine (the same messaging approach used in low-latency trading). Correlated with network reconnaissance telemetry into a single SIEM timeline over mTLS, monitorable from any device on the network via a standalone intranet server. Portable to any mesh network with minor modification.</p>
           <span class="metric">Infrastructure <b>locked and proven</b> (June 2026); classifier in active research</span>
-          <div class="stack"><span>Python</span><span>Intel 5300 CSI</span><span>Wazuh</span><span>mTLS</span></div>
+          <div class="stack"><span>Python</span><span>Intel 5300 CSI</span><span>Wazuh</span><span>mTLS</span><span>ZeroMQ</span></div>
           <a class="card-link" href="https://github.com/Jake36999/network_management" target="_blank" rel="noopener">View repository →</a>
         </div>
 
@@ -141,7 +148,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="alt" id="contact">
+  <section id="contact">
     <div class="wrap">
       <div class="contact-panel reveal">
         <p class="eyebrow">Get in touch</p>
