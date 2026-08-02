@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Work — Jake McIntosh</title>
-<meta name="description" content="Case studies: cryptographically-audited fine-tuning pipelines, a local desktop AI assistant, MCP-governed agent orchestration, RAG memory, and more.">
+<title>Case Studies — Jake McIntosh</title>
+<meta name="description" content="Six production repositories: cryptographically-audited fine-tuning pipelines, MCP agent orchestration with governed patching, RAG memory, dev toolchains, and applied RF machine learning.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site">
   <div class="wrap">
-    <span class="brand">Jake McIntosh</span>
+    <span class="brand">Jake <span>McIntosh</span></span>
     <nav class="main">
       <a href="index.html">Home</a>
       <a href="work.html" class="active">Work</a>
@@ -21,94 +21,144 @@
 </header>
 
 <main>
+
   <div class="wrap">
-
-    <section class="hero tight">
-      <p class="eyebrow">Case studies</p>
-      <h1>Problem, constraint, what I built.</h1>
-      <p class="lede">Six active repositories. Every one below is real, running, and tested — the numbers are the actual output, not estimates.</p>
-    </section>
-
-    <hr class="divider">
-
-    <section class="tight">
-      <span class="card tag" style="display:inline-block;">Featured</span>
-      <h2>Custom_Agent_Forge — cryptographically-audited training data</h2>
-      <p><strong>Problem:</strong> fine-tuning on a codebase usually means dumping files at an LLM and hoping the resulting examples are correct — with no way to prove after the fact that a row wasn't hallucinated.</p>
-      <p><strong>What I built:</strong> a five-layer pipeline (ingest → topology → semantic projection → strict validation → synthesis) that produces ChatML/QLoRA training data with a SHA-256 hash-chained ledger tracing every accept/reject decision, plus cycle-quarantine handling for the circular dependencies real codebases actually have.</p>
-      <p><strong>Proof:</strong> validated end-to-end against <code>encode/starlette</code> — 1,615 nodes extracted, 198 cycle-quarantined, 6,994 ledger entries at 100% verified integrity, 427 tests passing, a 1.17M-row output matrix.</p>
-      <div class="stack"><span>Python</span><span>FastAPI</span><span>Celery</span><span>Redis</span><span>Pydantic v2</span><span>tree-sitter</span><span>Docker</span></div>
-      <p><a href="https://github.com/Jake36999/Custom_Agent_Forge" target="_blank" rel="noopener">View repository →</a></p>
-    </section>
-
-    <hr class="divider">
-
-    <div class="grid">
-
-      <div class="card">
-        <span class="tag">Daily driver</span>
-        <h3>Mark-XLVIII</h3>
-        <p>Fully local desktop AI assistant with no cloud dependency for any core capability. Dual-mode planning (Markdown or a Canvas graph) compiles to version-bound run artifacts, gated behind a human+model dual-critic review before anything executes.</p>
-        <p><strong>Proof:</strong> this is my daily driver — commits land against it most days. Built on <a href="https://github.com/FatihMakes/Mark-L" target="_blank" rel="noopener">Mark-L</a> (CC BY-NC 4.0) and <a href="https://github.com/HKUDS/ClawTeam" target="_blank" rel="noopener">ClawTeam</a> (MIT); everything that makes it distinctive — planning, memory, vision, the safety layer — is original work with no upstream equivalent.</p>
-        <div class="stack"><span>Python</span><span>PyQt6</span><span>MCP</span><span>LM Studio</span></div>
-        <p><a href="https://github.com/Jake36999/Mark-XLVIII-main" target="_blank" rel="noopener">View repository →</a></p>
-      </div>
-
-      <div class="card">
-        <span class="tag">Agent governance</span>
-        <h3>Agent_backend</h3>
-        <p>MCP-compatible local agentic orchestrator. Code patches require an explicit approval record and a SHA256 diff match before applying, with automatic snapshot-based rollback if anything goes wrong.</p>
-        <p><strong>Proof:</strong> <code>v0.2.0-wave1-pipeline-bindings</code>, 264 Python + 25 Node tests passing per the last audit.</p>
-        <div class="stack"><span>Python</span><span>Node.js</span><span>SQLite</span><span>JSON-RPC</span><span>MCP</span></div>
-        <p><a href="https://github.com/Jake36999/Agent_backend" target="_blank" rel="noopener">View repository →</a></p>
-      </div>
-
-      <div class="card">
-        <span class="tag">RAG memory</span>
-        <h3>remember_me</h3>
-        <p>Local-first notes app with a real sync state machine — capture always succeeds even with the backend down — and citation-required retrieval that says "not found" instead of guessing. Review-first artifact generation, never auto-commits.</p>
-        <p><strong>Proof:</strong> working end-to-end — capture, backend sync with retry, lexical and semantic search, citations on every result. Built on Platypus (MIT) and Mnemosyne (AGPL-3.0).</p>
-        <div class="stack"><span>Rust</span><span>Tauri</span><span>React</span><span>FastAPI</span><span>pgvector</span></div>
-        <p><a href="https://github.com/Jake36999/remember_me" target="_blank" rel="noopener">View repository →</a></p>
-      </div>
-
-      <div class="card">
-        <span class="tag">Process discipline</span>
-        <h3>ToolSet</h3>
-        <p>A 12-phase, gate-enforced rebuild of a repo-analysis toolchain. Each phase requires passing tests and explicit approval before the next begins, enforced by a custom reviewer that rejects any change lacking terminal-verified proof.</p>
-        <p><strong>Proof:</strong> 289/289 tests passing across all 12 phases, with CI running the full matrix on every push.</p>
-        <div class="stack"><span>Python</span><span>MCP</span><span>CI/CD</span></div>
-        <p><a href="https://github.com/Jake36999/ToolSet" target="_blank" rel="noopener">View repository →</a></p>
-      </div>
-
-      <div class="card">
-        <span class="tag">RF / applied ML</span>
-        <h3>network_management</h3>
-        <p>Device-free RF presence sensing fused with network security correlation. Intel 5300 CSI capture over a patched driver, bridged across hosts via mTLS, correlated into a single SIEM timeline.</p>
-        <p><strong>Proof:</strong> infrastructure locked and proven as of June 2026. The presence-sensing model is honest open research — an off-the-shelf model didn't fit the CSI shape my hardware produces, so I'm training a narrowly-scoped classifier from scratch rather than overclaiming a fix. A readiness gate already caught and correctly discarded one bad training run.</p>
-        <div class="stack"><span>Python</span><span>Intel 5300 CSI</span><span>Wazuh</span><span>mTLS</span></div>
-        <p><a href="https://github.com/Jake36999/network_management" target="_blank" rel="noopener">View repository →</a></p>
-      </div>
-
-      <div class="card">
-        <span class="tag">Ongoing research</span>
-        <h3>quantule_mapper</h3>
-        <p>15 months of stress-testing self-derived physics reasoning through progressively rigorous simulation and validation. Started as an attempt to find the error in my own logic — still running, deliberately not scoped to ship.</p>
-        <div class="stack"><span>Python</span><span>JAX</span><span>CuPy</span><span>FastAPI</span></div>
-        <p><a href="https://github.com/Jake36999/quantule_mapper" target="_blank" rel="noopener">View repository →</a></p>
-      </div>
-
-    </div>
-
-    <hr class="divider">
-
-    <section class="tight">
-      <div class="note">
-        <strong>On licensing:</strong> remember_me's backend (Mnemosyne) is AGPL-3.0 and Mark-XLVIII's base (Mark-L) is CC BY-NC 4.0 — both restrict commercial use of that specific underlying material. Both foundations are credited above rather than quietly absorbed. Neither restriction applies to contract or client work — that's built fresh, not resold from either of these.
+    <section class="hero">
+      <div class="narrow" style="text-align:center">
+        <p class="eyebrow">Case studies</p>
+        <h1>Problem, approach, measured result.</h1>
+        <p class="lede">Six active repositories. Every figure below is output from a real run — not an estimate.</p>
       </div>
     </section>
-
   </div>
+
+  <!-- FEATURED -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Featured</p>
+        <h2>Custom_Agent_Forge</h2>
+        <p>An auditable training-data pipeline for fine-tuning on real codebases.</p>
+      </div>
+      <div class="narrow">
+        <div class="card reveal">
+          <h3>The problem</h3>
+          <p>Generating fine-tuning data from a codebase typically offers no way to verify, after the fact, that a given training example was correctly derived rather than hallucinated.</p>
+          <h3 style="margin-top:22px">The approach</h3>
+          <p>A five-layer pipeline — ingestion, topological analysis, semantic projection, strict contract validation, synthesis — producing ChatML and QLoRA output. Every accept and reject decision is written to a SHA-256 hash-chained ledger. Circular dependencies are quarantined and logged rather than aborting the run.</p>
+          <h3 style="margin-top:22px">The result</h3>
+          <p>Validated end-to-end against <code>encode/starlette</code>.</p>
+          <div class="stats" style="margin:22px 0 4px">
+            <div class="stat"><div class="n">1,615</div><div class="l">Nodes extracted</div></div>
+            <div class="stat"><div class="n">6,994</div><div class="l">Ledger entries</div></div>
+            <div class="stat"><div class="n">100%</div><div class="l">Verified integrity</div></div>
+            <div class="stat"><div class="n">427</div><div class="l">Tests passing</div></div>
+          </div>
+          <div class="stack"><span>Python</span><span>FastAPI</span><span>Celery</span><span>Redis</span><span>Pydantic v2</span><span>tree-sitter</span><span>Docker</span></div>
+          <a class="card-link" href="https://github.com/Jake36999/Custom_Agent_Forge" target="_blank" rel="noopener">View repository →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER PROJECTS -->
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Also shipped</p>
+        <h2>Five more in production</h2>
+        <p>Spanning agent governance, desktop AI, retrieval, developer tooling, and applied RF machine learning.</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="card reveal">
+          <span class="tag">Agent governance</span>
+          <h3>Agent_backend</h3>
+          <p><strong>Problem:</strong> permitting an agent to modify source code is a liability without verification and a reliable path back.</p>
+          <p><strong>Approach:</strong> an MCP-compatible orchestrator where patches require an explicit approval record and a SHA256 diff match before applying, with snapshot-based rollback.</p>
+          <span class="metric"><b>264</b> Python + <b>25</b> Node tests passing · <code>v0.2.0</code></span>
+          <div class="stack"><span>Python</span><span>Node.js</span><span>SQLite</span><span>JSON-RPC</span><span>MCP</span></div>
+          <a class="card-link" href="https://github.com/Jake36999/Agent_backend" target="_blank" rel="noopener">View repository →</a>
+        </div>
+
+        <div class="card reveal">
+          <span class="tag">Desktop AI platform</span>
+          <h3>Mark-XLVIII</h3>
+          <p><strong>Problem:</strong> assistant platforms that depend on cloud inference cannot be used where data must not leave the machine.</p>
+          <p><strong>Approach:</strong> a fully local runtime with dual-mode planning — Markdown or Canvas graph — compiling to version-bound run artifacts behind a human and model dual-critic review gate.</p>
+          <span class="metric">In <b>daily production use</b>, actively developed</span>
+          <div class="stack"><span>Python</span><span>PyQt6</span><span>MCP</span><span>LM Studio</span></div>
+          <a class="card-link" href="https://github.com/Jake36999/Mark-XLVIII-main" target="_blank" rel="noopener">View repository →</a>
+        </div>
+
+        <div class="card reveal">
+          <span class="tag">RAG memory</span>
+          <h3>remember_me</h3>
+          <p><strong>Problem:</strong> retrieval systems commonly answer with confidence when nothing relevant has been indexed.</p>
+          <p><strong>Approach:</strong> a sync state machine where local capture succeeds even with the backend unavailable, citation-required retrieval that reports "not found" rather than inferring, and review-first artifact generation with no auto-commit.</p>
+          <span class="metric">Operational end to end — capture, sync, lexical and semantic search</span>
+          <div class="stack"><span>Rust</span><span>Tauri</span><span>React</span><span>FastAPI</span><span>pgvector</span></div>
+          <a class="card-link" href="https://github.com/Jake36999/remember_me" target="_blank" rel="noopener">View repository →</a>
+        </div>
+
+        <div class="card reveal">
+          <span class="tag">Developer tooling</span>
+          <h3>ToolSet</h3>
+          <p><strong>Problem:</strong> tooling degrades when nothing enforces that "complete" means tested and verified.</p>
+          <p><strong>Approach:</strong> a twelve-phase rebuild of a repository-analysis toolchain, each phase gated on passing tests and explicit approval, with a reviewer that rejects changes lacking terminal-verified evidence.</p>
+          <span class="metric"><b>289/289</b> tests passing · CI on Windows and Linux</span>
+          <div class="stack"><span>Python</span><span>MCP</span><span>CI/CD</span></div>
+          <a class="card-link" href="https://github.com/Jake36999/ToolSet" target="_blank" rel="noopener">View repository →</a>
+        </div>
+
+        <div class="card reveal">
+          <span class="tag">Applied ML / RF</span>
+          <h3>network_management</h3>
+          <p><strong>Problem:</strong> device-free presence sensing and network security monitoring are typically separate disciplines with no shared timeline.</p>
+          <p><strong>Approach:</strong> Intel 5300 CSI capture via a patched driver, bridged across hosts over mTLS, correlated with network reconnaissance telemetry into a single SIEM timeline.</p>
+          <span class="metric">Infrastructure <b>locked and proven</b> (June 2026); classifier in active research</span>
+          <div class="stack"><span>Python</span><span>Intel 5300 CSI</span><span>Wazuh</span><span>mTLS</span></div>
+          <a class="card-link" href="https://github.com/Jake36999/network_management" target="_blank" rel="noopener">View repository →</a>
+        </div>
+
+        <div class="card reveal">
+          <span class="tag">Ongoing research</span>
+          <h3>quantule_mapper</h3>
+          <p><strong>Context:</strong> the project that prompted learning to code 15 months ago — externalising and stress-testing self-derived physics reasoning through progressively rigorous simulation and validation.</p>
+          <p><strong>Status:</strong> ongoing by design, not scoped to ship. Included as evidence of sustained, self-directed research discipline.</p>
+          <div class="stack"><span>Python</span><span>JAX</span><span>CuPy</span><span>FastAPI</span></div>
+          <a class="card-link" href="https://github.com/Jake36999/quantule_mapper" target="_blank" rel="noopener">View repository →</a>
+        </div>
+
+      </div>
+
+      <div class="narrow" style="margin-top:34px">
+        <p class="note reveal"><strong>Licensing:</strong> remember_me's backend (Mnemosyne) is AGPL-3.0 and Mark-XLVIII's base (Mark-L) is CC BY-NC 4.0. Both restrict commercial use of that specific underlying material, and both are credited in their repositories. Neither restriction applies to client or contract work, which is built fresh.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="alt" id="contact">
+    <div class="wrap">
+      <div class="contact-panel reveal">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Discuss a project</h2>
+        <p class="lede">Available for AI training and evaluation contracts, agent systems consulting, and backend automation engagements.</p>
+        <ul class="contact-list">
+          <li><span class="label">Email</span><a href="mailto:jakemcintosh1324@gmail.com">jakemcintosh1324@gmail.com</a></li>
+          <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/jake-l-mcintosh-data-ops" target="_blank" rel="noopener">jake-l-mcintosh</a></li>
+          <li><span class="label">GitHub</span><a href="https://github.com/Jake36999" target="_blank" rel="noopener">Jake36999</a></li>
+          <li><span class="label">Location</span>Preston, UK — remote</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:jakemcintosh1324@gmail.com">Email me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site">
@@ -117,6 +167,26 @@
     <a href="mailto:jakemcintosh1324@gmail.com">jakemcintosh1324@gmail.com</a>
   </div>
 </footer>
+
+<script>
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+  function showAll() { for (var i = 0; i < els.length; i++) els[i].classList.add('in'); }
+  if (!('IntersectionObserver' in window)) { showAll(); return; }
+  document.documentElement.classList.add('reveal-ready');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry, i) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      setTimeout(function () { el.classList.add('in'); }, i * 70);
+      io.unobserve(el);
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
+  for (var i = 0; i < els.length; i++) io.observe(els[i]);
+  setTimeout(showAll, 3000);
+})();
+</script>
 
 </body>
 </html>

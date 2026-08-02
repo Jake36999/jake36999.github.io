@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jake McIntosh — Local-First Agentic AI Systems</title>
-<meta name="description" content="Jake McIntosh builds local-first agentic AI systems: tool-calling governance, RAG memory, and applied ML pipelines with real provenance discipline.">
+<title>Jake McIntosh — AI Systems Engineer, Preston UK</title>
+<meta name="description" content="Jake McIntosh builds local-first agentic AI systems: tool-calling governance, RAG memory, and applied ML pipelines. Available for contract and consulting work.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site">
   <div class="wrap">
-    <span class="brand">Jake McIntosh</span>
+    <span class="brand">Jake <span>McIntosh</span></span>
     <nav class="main">
       <a href="index.html" class="active">Home</a>
       <a href="work.html">Work</a>
@@ -21,130 +21,347 @@
 </header>
 
 <main>
+
+  <!-- HERO -->
   <div class="wrap">
-
-    <section class="hero tight">
-      <p class="eyebrow">Domain expert, locally-hosted agentic AI</p>
-      <h1>I build local-first AI systems that have to prove they worked — not just claim it.</h1>
-      <p class="lede">Tool-calling governance, RAG memory, and applied ML pipelines. Cryptographic audit trails and human-in-the-loop approval by default, across every system I've shipped in the last 15 months.</p>
-      <div class="cta-row">
-        <a class="btn primary" href="work.html">See the work</a>
-        <a class="btn ghost" href="mailto:jakemcintosh1324@gmail.com">Get in touch</a>
-      </div>
-    </section>
-
-    <hr class="divider">
-
-    <section class="tight">
-      <div class="section-head">
-        <p class="eyebrow">Before the systems</p>
-        <h2>A background that refused to stay in one lane</h2>
-        <p>I started teaching myself to code 15 months ago to validate my own physics reasoning — that project, quantule_mapper, is still running and is the only one here that spans the full 15 months. AI/ML came along the way to support it; everything else below is the product of the last 6 months, once that skillset had somewhere else to point.</p>
-        <p>Before any of it: cross-checking government import compliance records for the Animal and Plant Health Agency, working as a carer specialising in challenging behaviour and complex needs with strong recognition from nursing staff, and account-managing technical sales under real commercial pressure — plus years across hospitality, admin, and industrial work. Different rooms, the same instinct: stay calm, and catch the detail everyone else missed. That instinct is what ended up built into the software.</p>
-      </div>
-    </section>
-
-    <hr class="divider">
-
-    <section>
-      <div class="section-head">
-        <p class="eyebrow">How the systems are shaped</p>
-        <h2>Every project runs the same pipeline</h2>
-        <p>From raw input to a human decision — the shape doesn't change whether the input is a codebase, a note, or a radio signal.</p>
-      </div>
-
-      <svg class="arch" viewBox="0 0 640 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pipeline diagram: Files, APIs, Events into Ingestion and Cleaning, into Queue, State and Workers, into Embedding, Search and Simulation, into Memory, Validation and Tool Calls, into Agent Output, API Response and Human Review">
-        <defs>
-          <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--accent)"/>
-          </marker>
-        </defs>
-        <g font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="16" font-weight="600">
-          <rect x="120" y="10"  width="400" height="60" rx="10" fill="var(--bg-alt)" stroke="var(--border)"/>
-          <text x="320" y="46" text-anchor="middle" fill="var(--text)">Files / APIs / Events</text>
-
-          <rect x="120" y="100" width="400" height="60" rx="10" fill="var(--bg-alt)" stroke="var(--border)"/>
-          <text x="320" y="136" text-anchor="middle" fill="var(--text)">Ingestion + Cleaning</text>
-
-          <rect x="120" y="190" width="400" height="60" rx="10" fill="var(--bg-alt)" stroke="var(--border)"/>
-          <text x="320" y="226" text-anchor="middle" fill="var(--text)">Queue / State / Workers</text>
-
-          <rect x="120" y="280" width="400" height="60" rx="10" fill="var(--bg-alt)" stroke="var(--border)"/>
-          <text x="320" y="316" text-anchor="middle" fill="var(--text)">Embedding / Search / Simulation</text>
-
-          <rect x="120" y="370" width="400" height="60" rx="10" fill="var(--accent-dim)" stroke="var(--accent)"/>
-          <text x="320" y="406" text-anchor="middle" fill="var(--text)">Memory / Validation / Tool Calls</text>
-
-          <rect x="120" y="460" width="400" height="60" rx="10" fill="var(--bg-alt)" stroke="var(--border)"/>
-          <text x="320" y="496" text-anchor="middle" fill="var(--text)">Agent Output / API Response / Human Review</text>
-        </g>
-        <g stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)">
-          <line x1="320" y1="70"  x2="320" y2="98"/>
-          <line x1="320" y1="160" x2="320" y2="188"/>
-          <line x1="320" y1="250" x2="320" y2="278"/>
-          <line x1="320" y1="340" x2="320" y2="368"/>
-          <line x1="320" y1="430" x2="320" y2="458"/>
-        </g>
-      </svg>
-      <p class="note">The highlighted step is the one that matters most: nothing reaches a human or an API response without passing through validation first. That's true in a fine-tuning pipeline, a notes app, and an RF sensing rig — three completely different domains, the same rule.</p>
-    </section>
-
-    <hr class="divider">
-
-    <section>
-      <div class="section-head">
-        <p class="eyebrow">What that actually means</p>
-        <h2>Four habits, five unrelated domains</h2>
-        <p>These weren't planned as a "philosophy" — they're just what kept showing up, independently, across agent orchestration, RAG memory, dev tooling, and RF/ML systems.</p>
-      </div>
-      <div class="principles">
-        <div class="card">
-          <p class="num">01</p>
-          <h3>Audit trails, not just outputs</h3>
-          <p>Hash-chained ledgers, SHA256-verified patch diffs, SHA1 manifest fingerprints — every accept/reject decision is traceable, not just the final answer.</p>
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <p class="availability"><span class="dot"></span> Available for contract work — remote or Preston, UK</p>
+          <h1>AI systems engineer building agents that prove their work.</h1>
+          <p class="lede">Local-first agentic AI: tool-calling governance, RAG memory, and applied ML pipelines — with cryptographic audit trails and human approval gates as standard, not an afterthought.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="mailto:jakemcintosh1324@gmail.com">Contact me</a>
+            <a class="btn ghost" href="work.html">View case studies</a>
+          </div>
+          <div class="social-rail">
+            <a href="https://github.com/Jake36999" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.9 5.34.9 11.6c0 4.9 3.17 9.05 7.57 10.52.55.1.76-.24.76-.53v-1.9c-3.08.67-3.73-1.48-3.73-1.48-.5-1.29-1.23-1.63-1.23-1.63-1.01-.69.08-.67.08-.67 1.11.08 1.7 1.15 1.7 1.15.99 1.7 2.6 1.21 3.23.93.1-.72.39-1.21.7-1.49-2.46-.28-5.05-1.23-5.05-5.48 0-1.21.43-2.2 1.15-2.98-.12-.28-.5-1.41.1-2.94 0 0 .93-.3 3.05 1.14a10.6 10.6 0 0 1 5.56 0c2.11-1.44 3.04-1.14 3.04-1.14.6 1.53.22 2.66.11 2.94.72.78 1.15 1.77 1.15 2.98 0 4.26-2.6 5.2-5.07 5.47.4.35.76 1.03.76 2.08v3.08c0 .3.2.64.77.53a11.11 11.11 0 0 0 7.56-10.52C23.1 5.34 18.27.5 12 .5z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/jake-l-mcintosh-data-ops" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a href="mailto:jakemcintosh1324@gmail.com" aria-label="Email" title="Email">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 4.99-8-4.99V6l8 5 8-5v2.24z"/></svg>
+            </a>
+          </div>
         </div>
-        <div class="card">
-          <p class="num">02</p>
-          <h3>Quarantine, never silently delete</h3>
-          <p>Bad artifacts get isolated and logged so the failure stays inspectable, instead of vanishing.</p>
-        </div>
-        <div class="card">
-          <p class="num">03</p>
-          <h3>Honest, narrow scope claims</h3>
-          <p>A system is labelled at exactly the confidence level it's earned. Written non-goal lists, not marketing.</p>
-        </div>
-        <div class="card">
-          <p class="num">04</p>
-          <h3>Gates that catch my own mistakes</h3>
-          <p>Readiness gates that have already caught and correctly discarded a bad training run, instead of shipping it.</p>
+
+        <div class="hero-art">
+          <svg viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: inputs flow through validation and approval gates before reaching output">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="var(--accent)" stop-opacity=".18"/>
+                <stop offset="100%" stop-color="var(--accent-2)" stop-opacity=".10"/>
+              </linearGradient>
+              <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="var(--accent)"/>
+              </marker>
+            </defs>
+
+            <rect x="10" y="10" width="400" height="360" rx="22" fill="url(#g1)"/>
+
+            <g font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="13" font-weight="700">
+              <!-- inputs -->
+              <g>
+                <rect x="42" y="46" width="104" height="40" rx="10" fill="var(--bg)" stroke="var(--border)"/>
+                <text x="94" y="71" text-anchor="middle" fill="var(--text)">Codebase</text>
+                <rect x="42" y="98" width="104" height="40" rx="10" fill="var(--bg)" stroke="var(--border)"/>
+                <text x="94" y="123" text-anchor="middle" fill="var(--text)">Documents</text>
+                <rect x="42" y="150" width="104" height="40" rx="10" fill="var(--bg)" stroke="var(--border)"/>
+                <text x="94" y="175" text-anchor="middle" fill="var(--text)">Sensors</text>
+              </g>
+
+              <!-- agent core -->
+              <rect x="196" y="76" width="86" height="86" rx="18" fill="var(--accent)" />
+              <text x="239" y="112" text-anchor="middle" fill="#fff" font-size="12">AGENT</text>
+              <text x="239" y="130" text-anchor="middle" fill="#fff" font-size="12">RUNTIME</text>
+
+              <!-- validation gate -->
+              <rect x="150" y="216" width="180" height="52" rx="12" fill="var(--bg)" stroke="var(--accent)" stroke-width="2"/>
+              <text x="240" y="240" text-anchor="middle" fill="var(--text)" font-size="12">VALIDATION GATE</text>
+              <text x="240" y="257" text-anchor="middle" fill="var(--text-dim)" font-size="11" font-weight="600">hash-verified · approval required</text>
+
+              <!-- output -->
+              <rect x="150" y="298" width="180" height="44" rx="12" fill="var(--bg)" stroke="var(--border)"/>
+              <text x="240" y="325" text-anchor="middle" fill="var(--text)">Human review</text>
+
+              <!-- ledger chip -->
+              <g>
+                <rect x="308" y="86" width="72" height="66" rx="12" fill="var(--bg)" stroke="var(--border)"/>
+                <text x="344" y="112" text-anchor="middle" fill="var(--text-dim)" font-size="10" font-weight="700">LEDGER</text>
+                <circle cx="330" cy="130" r="4" fill="var(--accent-2)"/>
+                <circle cx="344" cy="130" r="4" fill="var(--accent-2)"/>
+                <circle cx="358" cy="130" r="4" fill="var(--accent-2)"/>
+              </g>
+            </g>
+
+            <g stroke="var(--accent)" stroke-width="2" fill="none" marker-end="url(#ar)" opacity=".85">
+              <path d="M146 66 H176 Q196 66 196 90 V104"/>
+              <path d="M146 118 H192"/>
+              <path d="M146 170 H176 Q196 170 196 146 V134"/>
+              <path d="M239 162 V210"/>
+              <path d="M240 268 V292"/>
+            </g>
+            <g stroke="var(--border)" stroke-width="2" stroke-dasharray="4 4" fill="none">
+              <path d="M282 119 H308"/>
+            </g>
+          </svg>
         </div>
       </div>
     </section>
-
-    <hr class="divider">
-
-    <section id="contact">
-      <div class="section-head">
-        <p class="eyebrow">Get in touch</p>
-        <h2>Preston, UK — open to contract and consulting work</h2>
-        <p>AI training/evaluation contracts, agent systems consulting, and backend automation. No phone required — email is the fastest way to reach me.</p>
-      </div>
-      <div class="cta-row">
-        <a class="btn primary" href="mailto:jakemcintosh1324@gmail.com">jakemcintosh1324@gmail.com</a>
-        <a class="btn ghost" href="https://github.com/Jake36999" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/jake-l-mcintosh-data-ops" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </section>
-
   </div>
+
+  <!-- STATS -->
+  <section class="alt pad-sm">
+    <div class="wrap">
+      <div class="stats reveal">
+        <div class="stat"><div class="n">6</div><div class="l">Production repositories</div></div>
+        <div class="stat"><div class="n">1,000+</div><div class="l">Automated tests passing</div></div>
+        <div class="stat"><div class="n">5</div><div class="l">Domains applied across</div></div>
+        <div class="stat"><div class="n">280</div><div class="l">Commercial accounts managed</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Capabilities</p>
+        <h2>What I'm engaged for</h2>
+        <p>Three areas, each backed by shipped and tested systems you can inspect.</p>
+      </div>
+      <div class="grid cols-3">
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Agentic systems &amp; tool calling</h3>
+          <p>MCP-compatible orchestration, JSON-schema tool contracts, human-in-the-loop approval gates, and hash-verified patch and rollback for agents that modify real state.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
+          <h3>RAG &amp; semantic memory</h3>
+          <p>Local-first retrieval with pgvector and ChromaDB, citation-backed responses, resilient sync state machines, and provenance that survives an audit.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 3.5-4 3 2.5L20 7"/></svg></div>
+          <h3>Data &amp; ML pipelines</h3>
+          <p>Codebase ingestion, AST slicing, training-data synthesis and validation, distributed workers, and applied machine learning on real sensor data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Selected work</p>
+        <h2>Shipped, tested, measured</h2>
+        <p>Every figure is output from a real run — not an estimate. Full case studies on the <a href="work.html">work page</a>.</p>
+      </div>
+      <div class="grid">
+        <div class="card reveal">
+          <span class="tag">Data pipeline</span>
+          <h3>Custom_Agent_Forge</h3>
+          <p>Cryptographically-audited fine-tuning data pipeline with a SHA-256 hash-chained decision ledger and cycle quarantine for real-world dependency graphs.</p>
+          <span class="metric">Validated on <code>encode/starlette</code> — <b>6,994</b> ledger entries at <b>100%</b> verified integrity, <b>427</b> tests passing</span>
+          <div class="stack"><span>Python</span><span>FastAPI</span><span>Celery</span><span>Docker</span></div>
+          <a class="card-link" href="work.html">Read case study →</a>
+        </div>
+        <div class="card reveal">
+          <span class="tag">Agent governance</span>
+          <h3>Agent_backend</h3>
+          <p>MCP orchestrator where code patches require an explicit approval record and SHA256 diff match before applying, with snapshot-based rollback.</p>
+          <span class="metric"><b>264</b> Python + <b>25</b> Node tests passing at last audit</span>
+          <div class="stack"><span>Python</span><span>Node.js</span><span>SQLite</span><span>MCP</span></div>
+          <a class="card-link" href="work.html">Read case study →</a>
+        </div>
+        <div class="card reveal">
+          <span class="tag">Developer tooling</span>
+          <h3>ToolSet</h3>
+          <p>Twelve-phase repository analysis toolchain, each phase gated on passing tests and explicit approval, with CI across Windows and Linux.</p>
+          <span class="metric"><b>289/289</b> tests passing across all phases</span>
+          <div class="stack"><span>Python</span><span>MCP</span><span>CI/CD</span></div>
+          <a class="card-link" href="work.html">Read case study →</a>
+        </div>
+        <div class="card reveal">
+          <span class="tag">Applied ML / RF</span>
+          <h3>network_management</h3>
+          <p>Wi-Fi CSI presence sensing fused with network security correlation over mTLS, into a single forensic timeline.</p>
+          <span class="metric">Infrastructure <b>locked and proven</b>; classifier in active research</span>
+          <div class="stack"><span>Python</span><span>Intel 5300 CSI</span><span>Wazuh</span></div>
+          <a class="card-link" href="work.html">Read case study →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGINEERING STANDARD -->
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Engineering standard</p>
+        <h2>How these systems are built</h2>
+        <p>Four practices applied consistently across every repository, in five unrelated domains.</p>
+      </div>
+      <div class="grid cols-3">
+        <div class="card reveal">
+          <div class="num-badge">01</div>
+          <h3>Verifiable audit trails</h3>
+          <p>Hash-chained ledgers and SHA256-verified diffs. Every decision is traceable, not just the final output.</p>
+        </div>
+        <div class="card reveal">
+          <div class="num-badge">02</div>
+          <h3>Failures stay inspectable</h3>
+          <p>Bad artifacts are quarantined and logged rather than silently discarded, so the failure can be diagnosed.</p>
+        </div>
+        <div class="card reveal">
+          <div class="num-badge">03</div>
+          <h3>Scoped claims</h3>
+          <p>Systems are labelled at the confidence level they have earned, with written non-goals.</p>
+        </div>
+      </div>
+      <div style="height:22px"></div>
+      <div class="grid">
+        <div class="card reveal">
+          <div class="num-badge">04</div>
+          <h3>Enforced quality gates</h3>
+          <p>Readiness gates that block release on unproven output — including my own. One has already caught and discarded a non-viable model rather than shipping it.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Why it matters commercially</h3>
+          <p>Systems that report their own failures are the ones you can put in front of an auditor, a client, or a regulator — and the reason agent tooling gets adopted rather than quietly switched off.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Tech stack</p>
+        <h2>Tools in production use</h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-group reveal">
+          <h4>Languages</h4>
+          <div class="stack"><span>Python</span><span>Rust</span><span>Node.js</span><span>TypeScript</span><span>SQL</span></div>
+        </div>
+        <div class="tech-group reveal">
+          <h4>AI &amp; ML</h4>
+          <div class="stack"><span>MCP</span><span>LM Studio</span><span>RAG</span><span>pgvector</span><span>ChromaDB</span><span>tree-sitter</span><span>JAX</span><span>CuPy</span></div>
+        </div>
+        <div class="tech-group reveal">
+          <h4>Backend &amp; infra</h4>
+          <div class="stack"><span>FastAPI</span><span>Celery</span><span>Redis</span><span>Postgres</span><span>SQLite</span><span>Docker</span><span>mTLS</span></div>
+        </div>
+        <div class="tech-group reveal">
+          <h4>Practice</h4>
+          <div class="stack"><span>pytest</span><span>CI/CD</span><span>JSON Schema</span><span>Pydantic v2</span><span>Git</span><span>Linux</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACKGROUND -->
+  <section>
+    <div class="wrap narrow">
+      <div class="section-head reveal">
+        <p class="eyebrow">Professional summary</p>
+        <h2>Background</h2>
+        <p>Technical depth built on a decade of work where missing a detail carried real consequences.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <p class="when">Current</p>
+          <h3>Independent AI systems engineer</h3>
+          <p>Six active repositories spanning agent orchestration, RAG memory, developer tooling, and applied RF machine learning. Five built in the last six months.</p>
+        </div>
+        <div class="tl-item reveal">
+          <p class="when">2024</p>
+          <h3>Sales Account Manager &amp; Business Development — Rebound Electronics</h3>
+          <p>Promoted from admin support within one month. Managed 280 accounts covering BOM review, supplier negotiation, and supply chain risk mitigation across domestic and international suppliers.</p>
+        </div>
+        <div class="tl-item reveal">
+          <p class="when">2022 – 2023</p>
+          <h3>Imports Risk Manager — Animal and Plant Health Agency</h3>
+          <p>Compliance documentation review in a regulated government environment: cross-system record validation, high-volume processing, and GDPR-aware handling of sensitive data.</p>
+        </div>
+        <div class="tl-item reveal">
+          <p class="when">2017 – 2023</p>
+          <h3>Healthcare, administration &amp; operations</h3>
+          <p>Care sector work across nursing, complex needs and challenging behaviour, recognised with an early pay increase on nursing staff feedback. Alongside NHS administration, hospitality, logistics, and industrial operations.</p>
+        </div>
+        <div class="tl-item reveal">
+          <p class="when">Education</p>
+          <h3>Open University · Cardinal Newman College</h3>
+          <p>Science, Technology and Maths Access Module (Pass, 69.0). BTEC Science sub-diploma. University study commencing September 2026.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="alt" id="contact">
+    <div class="wrap">
+      <div class="contact-panel reveal">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Let's talk about your project</h2>
+        <p class="lede">Available for AI training and evaluation contracts, agent systems consulting, and backend automation engagements.</p>
+        <ul class="contact-list">
+          <li><span class="label">Email</span><a href="mailto:jakemcintosh1324@gmail.com">jakemcintosh1324@gmail.com</a></li>
+          <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/jake-l-mcintosh-data-ops" target="_blank" rel="noopener">jake-l-mcintosh</a></li>
+          <li><span class="label">GitHub</span><a href="https://github.com/Jake36999" target="_blank" rel="noopener">Jake36999</a></li>
+          <li><span class="label">Location</span>Preston, UK — remote</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:jakemcintosh1324@gmail.com">Email me</a>
+          <a class="btn ghost" href="business.html">Automation for businesses</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site">
   <div class="wrap">
     <span>© 2026 Jake McIntosh</span>
-    <span>Built local-first, shipped rough on purpose.</span>
+    <a href="mailto:jakemcintosh1324@gmail.com">jakemcintosh1324@gmail.com</a>
   </div>
 </footer>
+
+<script>
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+
+  function showAll() {
+    for (var i = 0; i < els.length; i++) els[i].classList.add('in');
+  }
+
+  // Only hide content once we know we can bring it back.
+  if (!('IntersectionObserver' in window)) { showAll(); return; }
+  document.documentElement.classList.add('reveal-ready');
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry, i) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      setTimeout(function () { el.classList.add('in'); }, i * 70);
+      io.unobserve(el);
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
+
+  for (var i = 0; i < els.length; i++) io.observe(els[i]);
+
+  // Safety net: never leave content hidden.
+  setTimeout(showAll, 3000);
+})();
+</script>
 
 </body>
 </html>
