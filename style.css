@@ -171,6 +171,22 @@ section.pad-sm { padding: 56px 0; }
 .hero-art { width: 100%; }
 .hero-art svg { width: 100%; height: auto; display: block; }
 
+/* ---------- inline stat grid (used inside case-study cards) ---------- */
+.stat-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 20px; margin: 22px 0 4px; text-align: center;
+}
+.stat-grid .stat-n {
+  font-size: 1.8rem; font-weight: 800; color: var(--accent);
+  line-height: 1.15; word-break: break-word;
+}
+.stat-grid .stat-l { font-size: 0.82rem; color: var(--text-dim); margin-top: 2px; }
+@media (max-width: 560px) {
+  .stat-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 14px; }
+  .stat-grid .stat-n { font-size: 1.4rem; }
+  .stat-grid .stat-l { font-size: 0.76rem; }
+}
+
 /* ---------- capability strip (replaces numeric stat band) ---------- */
 .cap-strip {
   display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;

@@ -55,11 +55,11 @@
           <p>Every accept and reject decision is written to a SHA-256 hash-chained ledger. It's a one-way, project-agnostic pipeline — base model in, fine-tuned model out — not an agent, and not used to support one.</p>
           <h3 style="margin-top:22px">The result</h3>
           <p>Run against <code>encode/starlette</code>, a real production codebase. The ledger's hash chain verified intact across the full run.</p>
-          <div class="stats" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:22px 0 4px;text-align:center">
-            <div class="stat"><div style="font-size:1.8rem;font-weight:800;color:var(--accent)">1,615</div><div style="font-size:0.82rem;color:var(--text-dim)">Nodes extracted</div></div>
-            <div class="stat"><div style="font-size:1.8rem;font-weight:800;color:var(--accent)">198</div><div style="font-size:0.82rem;color:var(--text-dim)">Cycles quarantined</div></div>
-            <div class="stat"><div style="font-size:1.8rem;font-weight:800;color:var(--accent)">6,994</div><div style="font-size:0.82rem;color:var(--text-dim)">Ledger entries</div></div>
-            <div class="stat"><div style="font-size:1.8rem;font-weight:800;color:var(--accent)">427</div><div style="font-size:0.82rem;color:var(--text-dim)">Own tests passed</div></div>
+          <div class="stat-grid">
+            <div><div class="stat-n">1,615</div><div class="stat-l">Nodes extracted</div></div>
+            <div><div class="stat-n">198</div><div class="stat-l">Cycles quarantined</div></div>
+            <div><div class="stat-n">6,994</div><div class="stat-l">Ledger entries</div></div>
+            <div><div class="stat-n">427</div><div class="stat-l">Own tests passed</div></div>
           </div>
           <div class="stack"><span>Python</span><span>FastAPI</span><span>Celery</span><span>Redis</span><span>Pydantic v2</span><span>tree-sitter</span><span>Docker</span></div>
           <a class="card-link" href="https://github.com/Jake36999/Custom_Agent_Forge" target="_blank" rel="noopener">View repository →</a>
